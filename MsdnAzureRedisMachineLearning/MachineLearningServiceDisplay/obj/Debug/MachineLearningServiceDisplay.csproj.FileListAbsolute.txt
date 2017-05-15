@@ -1,0 +1,10 @@
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\MachineLearningServiceDisplay.exe.config
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\MachineLearningServiceDisplay.exe
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\MachineLearningServiceDisplay.pdb
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\Newtonsoft.Json.dll
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\System.Net.Http.Formatting.dll
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\Newtonsoft.Json.xml
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\bin\Debug\System.Net.Http.Formatting.xml
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\obj\Debug\MachineLearningServiceDisplay.csprojResolveAssemblyReference.cache
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\obj\Debug\MachineLearningServiceDisplay.exe
+D:\OneDrive\Workspace\GitHub\Space\MsdnAzureRedisMachineLearning\MachineLearningServiceDisplay\obj\Debug\MachineLearningServiceDisplay.pdb
