@@ -1,0 +1,19 @@
+﻿@model IEnumerable<LearningHub.Models.SiteUser>
+
+<table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>LOGIN</th>
+        <th>EMAIL</th>
+    </tr>
+@foreach (var user in Model)
+{
+    <tr>
+        <td>@user.Id</td>
+        <td>@user.Title</td>
+        <td>@user.LoginName</td>
+        <td>@user.Email</td>
+    </tr>
+}
+</table>

@@ -1,0 +1,95 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.transdev-master-namebar {
+    background-color: #E51400;
+    height: 28px;
+    color: white;
+    padding-top: 4px;
+    padding-left: 12px;
+    padding-right: 28px;
+}
+
+.transdev-master-logo {
+    margin-left: 40px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.transdev-master-title {
+    color: #E51400;
+    font-weight: bold;
+    font-size: xx-large;
+    padding-top: 13px;
+}
+
+.transdev-master-links li {
+    padding-top: 13px;
+}
+
+.transdev-master-cog {
+    cursor: pointer;
+}
+
+.transdev-master-cog:hover {
+    color: yellow;
+}
+
+.transdev-master-copyright {
+    color: white;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.transdev-home-form {
+    width: 660px;
+}
+
+.transdev-home-grid {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.transdev-home-grid tr td {
+    padding: 5px;
+}
+
+.transdev-home-grid-center {
+    width: 610px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transdev-home-center {
+    width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transdev-home-video {
+    width: 100%;
+}
+
+.transdev-home-video-fullscreen {
+    text-align: right;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.transdev-course-heading {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.transdev-search-description {
+    font-size: smaller;
+    color: dimgray;
+}

@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transdev Learning Hub</title>
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="transdev-master-namebar">
+                <ul class="nav navbar-nav">
+                    <li>Transdev Australasia</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.Action("UserName")</li>
+                </ul>
+            </div>
+            <div>
+                &nbsp;
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="transdev-master-logo"><img src="~/Content/Images/transdev_logo.png" width="80" /></li>
+                    <li class="transdev-master-title">Learning Hub</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right transdev-master-links">
+                    <li>@Html.ActionLink("Home", "Index", routeValues: null, htmlAttributes: new { @class = "transdev-master-homelink" })</li>
+                    <li><a href="@LearningHub.Services.SharePointContext.SharePointBaseUrl" target="_top">The STATION</a></li>
+                    @Html.Action("MenuPages")
+                    <li>&nbsp;&nbsp;&nbsp;</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid body-content">
+        <p style="margin-top:92px;">
+            &nbsp;
+        </p>
+
+        <div class="row">
+            <div class="col-lg-2">
+                @Html.Action("Questions")
+            </div>
+            <div class="col-lg-8">
+                @RenderBody()
+            </div>
+            <div class="col-lg-2">
+                @{
+                    string actionName = Url.RequestContext.RouteData.Values["action"]?.ToString();
+                    string controllerName = Url.RequestContext.RouteData.Values["controller"]?.ToString();
+                }
+                @if (controllerName == "Home" && actionName == "Index")
+                {
+                    @Html.Action("Videos")
+                }
+            </div>
+        </div>
+
+        <hr />
+
+        <footer>
+            <div style="width:100%">
+                <img src="~/Content/Images/footer-bg.png" width="100%" />
+                <div class="transdev-master-copyright">&copy; Transdev @DateTime.Now.Year</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        $(".transdev-master-homelink").html("<span class='glyphicon glyphicon-home'></span> Home");
+    });
+</script>

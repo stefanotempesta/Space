@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SolidMvcSharePoint.Models.CourseTemplate">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\CourseTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SolidMvcSharePoint.Models.InstructorLedCourse">
+    <Position X="0.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIACAAAAAAAAAAACAAAIAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Models\InstructorLedCourse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SolidMvcSharePoint.Models.OnlineCourse">
+    <Position X="3" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OnlineCourse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SolidMvcSharePoint.Models.Registration">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEQAAAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SolidMvcSharePoint.Services.InstructorLedRegistrationService" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAgA=</HashCode>
+      <FileName>Services\InstructorLedRegistrationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SolidMvcSharePoint.Services.OnlineCourseRegistrationService" Collapsed="true">
+    <Position X="8.25" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\OnlineCourseRegistrationService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SolidMvcSharePoint.Models.Student">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SolidMvcSharePoint.Interfaces.IRegistrationService">
+    <Position X="8.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IRegistrationService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

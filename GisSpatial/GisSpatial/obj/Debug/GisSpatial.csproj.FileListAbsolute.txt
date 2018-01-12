@@ -1,0 +1,6 @@
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\bin\Debug\GisSpatial.exe.config
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\bin\Debug\GisSpatial.exe
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\bin\Debug\GisSpatial.pdb
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\obj\Debug\GisSpatial.csprojResolveAssemblyReference.cache
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\obj\Debug\GisSpatial.exe
+c:\users\stefano\documents\visual studio 2015\Projects\GisSpatial\GisSpatial\obj\Debug\GisSpatial.pdb

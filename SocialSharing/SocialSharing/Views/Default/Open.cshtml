@@ -1,0 +1,10 @@
+﻿@model SocialSharing.Models.Article
+
+<h2>@Model.Title</h2>
+<p>
+    @Model.Abstract
+</p>
+
+<hr />
+
+@Html.Action("ShareButtons", "Social", new { id = Model.Id })

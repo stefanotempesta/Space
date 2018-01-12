@@ -1,0 +1,1 @@
+D:\OneDrive\Workspace\CodePlex\StefanoTempestaNet\AzureIoT\RegisterDevice\bin\Debug\RegisterDevice.exe.config

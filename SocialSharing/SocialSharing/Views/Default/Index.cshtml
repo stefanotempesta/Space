@@ -1,0 +1,11 @@
+﻿@model IEnumerable<SocialSharing.Models.Article>
+
+<h2>Articles</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Title, "Open", new { id = item.Id })</li>
+    }
+</ul>
+

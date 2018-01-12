@@ -1,0 +1,12 @@
+﻿@{
+    var content = ViewData.Model as LearningHub.Models.Content;
+    string ext = content.FileName.Substring(content.FileName.LastIndexOf(".") + 1);
+
+    string fileHref = $"{ViewBag.SharePointBaseUrl}{content.ServerRelativeUrl}";
+    string iconSrc = $"{ViewBag.IconsUrl}/{ext}.png";
+}
+
+<a href="@fileHref" target="_blank">
+    <img src="@iconSrc" width="120" />
+    Open File
+</a>

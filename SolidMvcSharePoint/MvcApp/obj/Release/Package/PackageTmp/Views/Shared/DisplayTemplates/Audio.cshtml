@@ -1,0 +1,8 @@
+﻿@{
+    var content = ViewData.Model as LearningHub.Models.Content;
+    string fileSrc = $"{ViewBag.SharePointBaseUrl}{content.ServerRelativeUrl}";
+}
+
+<audio controls="controls">
+    <source src="@fileSrc" type="audio/mp3" />
+</audio>

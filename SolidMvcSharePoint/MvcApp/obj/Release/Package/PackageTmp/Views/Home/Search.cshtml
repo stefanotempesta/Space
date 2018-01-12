@@ -1,0 +1,43 @@
+﻿@model IEnumerable<LearningHub.Models.Course>
+
+@{
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@Html.Action("BreadcrumbTrail", new { trail = "Search" })
+
+<h3>Search Results for "@ViewBag.SearchTerm"</h3>
+<br />
+
+<table class="table table-striped" id="resultTable">
+@foreach (var course in Model)
+{
+    <tr data-id="@course.Id" class="transdev-search-preview">
+        <td>
+            <span class="glyphicon glyphicon-th-large" data-id="@course.Id"></span>
+        </td>
+        <td>
+            @Html.ActionLink(course.Title, "Course", new { id = course.Id })
+            <br />
+            <div id="coursePreview-@course.Id" style="display:none;">@Html.Action("CoursePreview", new { id = course.Id })</div>
+            <div id="courseDescription-@course.Id" class="transdev-search-description">@Html.Raw(course.ShortDescription)</div>
+        </td>
+    </tr>
+}
+</table>
+
+<script type="text/javascript">
+    $(function () {
+        $(".transdev-search-preview").on("mouseover", function () {
+            var id = $(this).data("id");
+            $("#coursePreview-" + id).fadeIn("slow");
+            $("#courseDescription-" + id).hide();
+        });
+
+        $(".transdev-search-preview").on("mouseleave", function () {
+            var id = $(this).data("id");
+            $("#coursePreview-" + id).fadeOut("slow");
+            $("#courseDescription-" + id).show();
+        });
+    });
+</script>

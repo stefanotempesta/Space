@@ -1,0 +1,8 @@
+﻿@model IEnumerable<LearningHub.Models.Question>
+
+<ul class="nav nav-pills nav-stacked">
+    @foreach (var question in Model)
+    {
+        <li>@Html.ActionLink(question.Text, "Course", new { id = question.CourseId }, new { @class = "well" })</li>
+    }
+</ul>

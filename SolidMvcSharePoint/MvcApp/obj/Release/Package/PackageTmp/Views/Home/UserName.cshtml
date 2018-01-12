@@ -1,0 +1,17 @@
+﻿@model dynamic
+
+@{ 
+    bool? isOwner = Model.IsOwner as bool?;
+}
+
+@Model.Name
+&nbsp;
+@if (isOwner.HasValue && isOwner.Value == true)
+{
+    <span class="glyphicon glyphicon-cog dropdown-toggle transdev-master-cog" data-toggle="dropdown"></span>
+    <ul class="dropdown-menu">
+        <li><a href="@Model.SharePointSiteUrl/_layouts/viewlsts.aspx" target="_top">Site contents</a></li>
+        <li><a href="@Model.SharePointSiteUrl/_layouts/settings.aspx" target="_top">Site settings</a></li>
+    </ul>
+}
+

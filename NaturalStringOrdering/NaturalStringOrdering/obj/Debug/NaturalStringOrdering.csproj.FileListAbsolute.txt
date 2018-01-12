@@ -1,0 +1,6 @@
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\bin\Debug\NaturalStringOrdering.exe.config
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\bin\Debug\NaturalStringOrdering.exe
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\bin\Debug\NaturalStringOrdering.pdb
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\obj\Debug\NaturalStringOrdering.csprojResolveAssemblyReference.cache
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\obj\Debug\NaturalStringOrdering.exe
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\NaturalStringOrdering\NaturalStringOrdering\obj\Debug\NaturalStringOrdering.pdb

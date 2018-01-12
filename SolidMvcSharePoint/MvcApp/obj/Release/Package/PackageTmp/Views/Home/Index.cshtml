@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LearningHub.Models.Tile>
+
+@{ 
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    int tilePosition = 0;
+}
+
+<div class="transdev-home-center">
+    @using (Html.BeginForm("Search", "Home", FormMethod.Post, new { @class = "transdev-home-form" }))
+    {
+        <div class="form-group has-feedback">
+            <input type="search" name="term" class="form-control" placeholder="Search">
+            <span class="glyphicon glyphicon-search form-control-feedback"></span>
+        </div>
+    }
+</div>
+
+<div class="transdev-home-grid-center">
+    <table class="transdev-home-grid">
+    @foreach (var tile in Model)
+    {
+        if (tilePosition % 4 == 0)
+        {
+            @Html.Raw("<tr>")
+        }
+
+        tilePosition++;
+
+        <td>
+            <a href="@Url.Action("Search", new { term = tile.Name })" title="@tile.Name"><img src="@ViewBag.TilesUrl/@tile.IconFileName" width="140" /></a>
+        </td>
+
+        if (tilePosition % 4 == 0)
+        {
+            @Html.Raw("</tr>")
+        }
+    }
+    </table>
+</div>
+
+

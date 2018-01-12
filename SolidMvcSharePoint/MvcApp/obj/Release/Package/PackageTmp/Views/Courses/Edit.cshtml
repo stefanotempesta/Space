@@ -1,0 +1,84 @@
+﻿@model LearningHub.Models.Course
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Course</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Objectives, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Objectives, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Objectives, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<hr />
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.LabelFor(model => model.ContentItems, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div id="contentItemList" class="col-md-10" style="margin-top: 7px;">
+            @Html.Action("CourseContentItems", new { courseId = Model.Id })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="control-label col-md-2">&nbsp;</div>
+        <div class="col-md-10">
+        @using (Ajax.BeginForm("AddContentItem", new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "contentItemList" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.Hidden("CourseId", Model.Id)
+
+            <div class="row">
+                <div class="col-md-6">
+                    @Html.DropDownList("ContentItemId", null, htmlAttributes: new { @class = "form-control" })
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" value="Add" class="btn btn-default" />
+                </div>
+            </div>
+        }
+        </div>
+    </div>
+</div>
+
+
+
+<hr />
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

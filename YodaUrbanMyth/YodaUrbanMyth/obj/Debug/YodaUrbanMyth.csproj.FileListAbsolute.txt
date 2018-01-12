@@ -1,0 +1,5 @@
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\YodaUrbanMyth\YodaUrbanMyth\bin\Debug\YodaUrbanMyth.exe.config
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\YodaUrbanMyth\YodaUrbanMyth\bin\Debug\YodaUrbanMyth.exe
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\YodaUrbanMyth\YodaUrbanMyth\bin\Debug\YodaUrbanMyth.pdb
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\YodaUrbanMyth\YodaUrbanMyth\obj\Debug\YodaUrbanMyth.exe
+D:\OneDrive\Workspace\CodePlex\stefanotempesta\StefanoTempestaNet\YodaUrbanMyth\YodaUrbanMyth\obj\Debug\YodaUrbanMyth.pdb

@@ -1,0 +1,96 @@
+﻿@model dynamic
+
+@{
+    string encodedTitle = Uri.EscapeDataString(Model.Article.Title);
+    string encodedUrl = Uri.EscapeDataString(Request.Url.AbsoluteUri);
+}
+
+<link href="~/Content/Social.css" rel="stylesheet" />
+
+<div>
+    <ul class="nav nav-pills nav-justified" data-id="@Model.Article.Id">
+        <li><a class="social social-facebook" data-social="Facebook" data-src="https://www.facebook.com/sharer/sharer.php?u=@(encodedUrl)&t=@(encodedTitle)&display=popup" title="Share on Facebook"><span class="entypo-social facebook"></span></a></li>
+        <li><a class="social social-twitter" data-social="Twitter" data-src="https://twitter.com/intent/tweet?text=@(encodedTitle)&url=@(encodedUrl)" title="Share on Twitter"><span class="entypo-social twitter"></span></a></li>
+        <li><a class="social social-gplus" data-social="GooglePlus" data-src="https://plus.google.com/share?url=@(encodedUrl)" title="Share on Google+"><span class="entypo-social googleplus"></span></a></li>
+        <li><a class="social social-linkedin" data-social="LinkedIn" data-src="https://www.linkedin.com/shareArticle?url=@(encodedUrl)&title=@(encodedTitle)&mini=true" title="Share on LinkedIn"><span class="entypo-social linkedin"></span></a></li>
+        <li><a class="social social-pinterest" data-social="Pinterest" data-src="https://www.pinterest.com/pin/create/bookmarklet/?url=@(encodedUrl)&description=@(encodedTitle)&media=" title="Share on Pinterest"><span class="entypo-social pinterest"></span></a></li>
+        <li><a class="social social-email" data-social="Email" data-toggle="modal" data-target="#emailSharing" title="Share by Email"><span class="glyphicon glyphicon-envelope"></span></a></li>
+    </ul>
+</div>
+
+@* Modal dialog for Email sharing *@
+<div id="emailSharing" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span class="glyphicon glyphicon-envelope text-warning"></span>&nbsp;Share by Email</h4>
+            </div>
+            <div class="modal-body">
+            @using (Ajax.BeginForm("ShareByEmail", "Social", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "emailShareResponse", InsertionMode = InsertionMode.Replace, OnBegin = "beginSendEmail", OnComplete = "completeSendEmail" }))
+            {
+                @Html.AntiForgeryToken()
+                <div id="emailShareResponse"></div>
+                <input type="hidden" name="email_subject" value="@Model.Article.Title" />
+                <div class="row">
+                    <div class="col-sm-9 form-group">
+                        <input class="form-control" name="email_address" placeholder="Email" type="email" required />
+                    </div>
+                </div>
+                <textarea class="form-control" name="email_body" rows="5">@Model.Article.Title&#013;&#010;&#013;&#010;@Request.Url.AbsoluteUri</textarea>
+                <br />
+                <div class="row">
+                    <div class="col-sm-12" style="text-align:center;">
+                        <div id="sendEmailButton">
+                            <input class="btn btn-warning" type="submit" value="  Send  ">
+                        </div>
+                        <div id="sendingEmailBar" style="display:none;">
+                            Sending email...<br />
+                            <img src="~/Content/Images/sending_bar.gif" />
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $(".social").on("click", function () {
+            var id = $(this).parent().parent().data("id");
+            var social = $(this).data("social");
+            var src = $(this).data("src");
+
+            $.ajax({
+                url: "@Url.Action("Audit", "Social")",
+                type: "POST",
+                headers: { securityToken: "@Model.SecurityToken"},
+                data: { modelId: id, socialName: social }
+            });
+
+            if (social != "Email") {
+                window.open(src, "SocialSharing", "width=800,height=400,menubar=no,location=no,resizable=no,scrollbars=no,status=no,toolbar=no", true);
+            }
+        });
+
+        $("#emailSharing").on('show.bs.modal', function () {
+            $("#emailShareResponse").html("");
+        });
+    });
+
+    function beginSendEmail() {
+        $("#sendEmailButton").hide();
+        $("#sendingEmailBar").show();
+        $("#emailShareResponse").html("");
+    }
+
+    function completeSendEmail() {
+        $("#sendEmailButton").show();
+        $("#sendingEmailBar").hide();
+    }
+</script>

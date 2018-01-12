@@ -1,0 +1,120 @@
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\csc.exe
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\System.Collections.Immutable.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\System.Reflection.Metadata.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\vbc.exe
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\VBCSCompiler.exe
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\roslyn\VBCSCompiler.exe.config
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\LearningHub.dll.config
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\LearningHub.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\LearningHub.pdb
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\EntityFramework.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.SharePoint.Client.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.SharePoint.Client.Search.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Helpers.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Mvc.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Razor.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.Deployment.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.Razor.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\EntityFramework.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Razor.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.Deployment.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Webpages.Razor.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Helpers.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\bin\System.Web.Mvc.xml
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\obj\Debug\LearningHub.csprojResolveAssemblyReference.cache
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\obj\Debug\LearningHub.dll
+D:\OneDrive\Workspace\Datacom\Transdev\LearningHub\obj\Debug\LearningHub.pdb
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\csc.exe
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\System.Collections.Immutable.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\System.Reflection.Metadata.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\vbc.exe
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\VBCSCompiler.exe
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\roslyn\VBCSCompiler.exe.config
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\LearningHub.dll.config
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\LearningHub.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\LearningHub.pdb
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\EntityFramework.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\EntityFramework.SqlServer.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.SharePoint.Client.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.SharePoint.Client.Runtime.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.SharePoint.Client.Search.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.Web.Infrastructure.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Helpers.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Mvc.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Razor.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.Deployment.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.Razor.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\EntityFramework.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\EntityFramework.SqlServer.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Razor.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.Deployment.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Webpages.Razor.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Helpers.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\bin\System.Web.Mvc.xml
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\obj\Debug\LearningHub.dll
+D:\OneDrive\Workspace\DatacomVSO\Transdev Learning Hub\LearningHub\obj\Debug\LearningHub.pdb
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\csc.exe
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\vbc.exe
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\VBCSCompiler.exe
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\LearningHub.dll.config
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\LearningHub.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\LearningHub.pdb
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\EntityFramework.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\EntityFramework.SqlServer.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.SharePoint.Client.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.SharePoint.Client.Runtime.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.SharePoint.Client.Search.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Helpers.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Mvc.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Razor.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.Deployment.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.Razor.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\EntityFramework.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Razor.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.Deployment.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Webpages.Razor.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Helpers.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\System.Web.Mvc.xml
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\obj\Debug\LearningHub.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\obj\Debug\LearningHub.pdb
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Ninject.dll
+C:\Users\stefa\Documents\Visual Studio 2015\Projects\SharePoint\CsomMvc\bin\Ninject.xml

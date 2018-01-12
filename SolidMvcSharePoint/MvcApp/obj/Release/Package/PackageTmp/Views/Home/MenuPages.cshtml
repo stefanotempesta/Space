@@ -1,0 +1,6 @@
+﻿@model IEnumerable<LearningHub.Models.Page>
+
+@foreach (var page in Model)
+{
+    <li>@Html.ActionLink(@page.Name, "MenuPage", new { url = @page.ServerRelativeUrl })</li>
+}

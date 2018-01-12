@@ -1,0 +1,10 @@
+﻿@model LearningHub.Models.Content
+
+<div class="panel panel-warning">
+    <div class="panel-heading transdev-course-heading">
+        @Model.Name
+    </div>
+    <div class="panel-body">
+        @Html.Display(string.Empty, Model.MimeType.ToString(), new { url = Model.ServerRelativeUrl })
+    </div>
+</div>

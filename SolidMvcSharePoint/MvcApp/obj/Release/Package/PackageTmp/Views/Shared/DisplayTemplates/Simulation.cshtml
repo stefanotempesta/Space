@@ -1,0 +1,6 @@
+﻿@{
+    var content = ViewData.Model as LearningHub.Models.Content;
+    string fileHref = $"{ViewBag.SharePointBaseUrl}{content.ServerRelativeUrl}";
+}
+
+<a href="@fileHref" target="_blank">Open Simulation</a>

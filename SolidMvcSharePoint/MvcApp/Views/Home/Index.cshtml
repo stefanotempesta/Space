@@ -1,0 +1,17 @@
+﻿@model IEnumerable<SolidMvcSharePoint.Models.CourseTemplate>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Course Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+        <tr>
+            <td>@Html.ActionLink(course.Title, "Course", new { id = course.Id })</td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetty.Codecs.Mqtt</name>
+    </assembly>
+    <members>
+        <member name="M:DotNetty.Codecs.Mqtt.MqttEncoder.DoEncode(DotNetty.Buffers.IByteBufferAllocator,DotNetty.Codecs.Mqtt.Packets.Packet,System.Collections.Generic.List{System.Object})">
+            <summary>
+                This is the main encoding method.
+                It's only visible for testing.
+                @param bufferAllocator Allocates ByteBuf
+                @param packet MQTT packet to encode
+                @return ByteBuf with encoded bytes
+            </summary>
+        </member>
+    </members>
+</doc>
