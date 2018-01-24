@@ -1,0 +1,6 @@
+geth attach -- opens the Geth console
+personal.unlockAccount(eth.coinbase)
+
+eth.coinbase -- address of the coinbase account
+-- unlocking the account for a longer time period. If you use 0 as duration, the account will be locked forever.
+personal.unlockAccount('address', 'passphrase', 'duration')

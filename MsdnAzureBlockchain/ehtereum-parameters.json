@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "namePrefix": {
+            "value": "newco"
+        },
+        "adminUsername": {
+            "value": "gethadmin"
+        },
+        "authType": {
+            "value": "password"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "ethereumNetworkID": {
+            "value": 20180120
+        },
+        "ethereumAccountPsswd": {
+            "value": null
+        },
+        "ethereumAccountPassphrase": {
+            "value": null
+        },
+        "numConsortiumMembers": {
+            "value": 2
+        },
+        "numMiningNodesPerMember": {
+            "value": 1
+        },
+        "mnNodeVMSize": {
+            "value": "Standard_D1_v2"
+        },
+        "mnStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "numTXNodes": {
+            "value": 1
+        },
+        "txNodeVMSize": {
+            "value": "Standard_D1_v2"
+        },
+        "txStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "location": {
+            "value": "eastus"
+        }
+    }
+}
