@@ -1,0 +1,1717 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.Relay</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Azure.Relay.AuthorizationFailedException">
+            <summary>
+            The exception that occurs when an authorization attempt fails.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.AuthorizationFailedException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.AuthorizationFailedException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.AuthorizationFailedException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.AuthorizationFailedException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error. </param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.AuthorizationFailedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.AuthorizationFailedException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.ConnectionLostException">
+            <summary>
+            An exception that occurs when a Listener gets disconnected from the Azure cloud service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ConnectionLostException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ConnectionLostException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ConnectionLostException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ConnectionLostException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ConnectionLostException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ConnectionLostException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.EndpointAlreadyExistsException">
+            <summary>
+            An exception that indicates the Relay HybridConnection/Endpoint already exists.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointAlreadyExistsException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointAlreadyExistsException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointAlreadyExistsException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointAlreadyExistsException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointAlreadyExistsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointAlreadyExistsException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.EndpointNotFoundException">
+            <summary>
+            Represents an exception when the Relay HybridConnection/Endpoint should exist but was not present.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointNotFoundException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointNotFoundException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointNotFoundException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointNotFoundException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.EndpointNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.EndpointNotFoundException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.HybridConnectionClient">
+            <summary>
+            Provides a client for initiating new send-side HybridConnections.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.#ctor(System.Uri)">
+            <summary>
+            Create a new HybridConnectionClient instance for initiating HybridConnections where no client authentication is required.
+            </summary>
+            <param name="address">The address on which to listen for HybridConnections.  This address should 
+            be of the format "sb://contoso.servicebus.windows.net/yourhybridconnection".</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.#ctor(System.Uri,Microsoft.Azure.Relay.TokenProvider)">
+            <summary>
+            Create a new HybridConnectionClient instance for initiating HybridConnections with client authentication.
+            </summary>
+            <param name="address">The address on which to listen for HybridConnections.  This address should 
+            be of the format "sb://contoso.servicebus.windows.net/yourhybridconnection".</param>
+            <param name="tokenProvider">The TokenProvider for connecting to ServiceBus.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.#ctor(System.String)">
+            <summary>Creates a new instance of <see cref="T:Microsoft.Azure.Relay.HybridConnectionClient" /> using the specified connection string.</summary>
+            <param name="connectionString">The connection string to use.  This connection string must include the EntityPath property.</param>
+            <returns>The newly created <see cref="T:Microsoft.Azure.Relay.HybridConnectionClient" /> instance.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the format of the <paramref name="connectionString" /> parameter is incorrect.</exception>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.#ctor(System.String,System.String)">
+            <summary>Creates a new instance of <see cref="T:Microsoft.Azure.Relay.HybridConnectionClient" /> from a connection string and
+            the specified HybridConection path. Use this overload only when the connection string does not use the 
+            <see cref="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.EntityPath" /> property.</summary> 
+            <param name="connectionString">The connection string used. This connection string must not include the EntityPath property.</param>
+            <param name="path">The path to the HybridConnection.</param>
+            <returns>The created <see cref="T:Microsoft.Azure.Relay.HybridConnectionClient" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the format of the <paramref name="connectionString" /> parameter is incorrect.</exception>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionClient.Address">
+            <summary>
+            Gets the address of this HybridConnection to connect through. The address on which to listen for HybridConnections.
+            This address should be of the format "sb://contoso.servicebus.windows.net/yourhybridconnection".
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionClient.Proxy">
+            <summary>
+            Gets or sets proxy information for connecting to ServiceBus.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionClient.TokenProvider">
+            <summary>
+            Gets the TokenProvider for authenticating HybridConnections.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionClient.OperationTimeout">
+            <summary>
+            Gets or sets the timeout used when connecting a HybridConnection.  Default value is 70 seconds.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionClient.ConnectionBufferSize">
+            <summary>
+            Gets or sets the connection buffer size.  Default value is 64K.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.CreateConnectionAsync">
+            <summary>
+            Establishes a new send-side HybridConnection and returns the Stream.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.GetRuntimeInformationAsync">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation"/> for this HybridConnection entity using the default timeout.
+            Unless specified in the connection string the default is 1 minute.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionClient.GetRuntimeInformationAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation"/> for this HybridConnection entity using the provided CancellationToken.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionUtility.BuildUri(System.String,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            Build the websocket uri for use with HybridConnection WebSockets.
+            Results in a Uri such as "wss://HOST:PORT/$hc/PATH?QUERY&amp;sb-hc-action=listen&amp;sb-hc-id=ID"
+            </summary>
+            <param name="host">The host name (required).</param>
+            <param name="port">The port (-1 is allowed).</param>
+            <param name="path">The hybridConnection path.</param>
+            <param name="query">An optional query string.</param>
+            <param name="action">The action (listen|connect|accept).</param>
+            <param name="id">The tracking id.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionUtility.FilterQueryString(System.String)">
+            <summary>
+            Filters out any query string values which start with the 'sb-hc-' prefix.  The returned string never
+            has a '?' character at the start.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionUtility.FilterQueryString(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            Filters out any query string values which start with the 'sb-hc-' prefix.  The returned string never
+            has a '?' character at the start.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionUtility.BuildQueryString(System.String,System.String,System.String)">
+            <summary>
+            Builds a query string, e.g. "existing=stuff_here&amp;sb-hc-action=listen&amp;sb-hc-id=TRACKING_ID"
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.HybridConnectionListener">
+            <summary>
+            Provides a listener for accepting HybridConnections from remote clients.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.#ctor(System.Uri,Microsoft.Azure.Relay.TokenProvider)">
+            <summary>
+            Create a new HybridConnectionListener instance for accepting HybridConnections.
+            </summary>
+            <param name="address">The address on which to listen for HybridConnections.  This address should 
+            be of the format "sb://contoso.servicebus.windows.net/yourhybridconnection".</param>
+            <param name="tokenProvider">The TokenProvider for connecting this listener to ServiceBus.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.#ctor(System.String)">
+            <summary>Creates a new instance of <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener" /> using the specified connection string.</summary>
+            <param name="connectionString">The connection string to use.  This connection string must include the EntityPath property.</param>
+            <returns>The newly created <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener" /> instance.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the format of the <paramref name="connectionString" /> parameter is incorrect.</exception>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.#ctor(System.String,System.String)">
+            <summary>Creates a new instance of <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener" /> from a connection string and
+            the specified HybridConection path. Use this overload only when the connection string does not use the 
+            <see cref="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.EntityPath" /> property.</summary> 
+            <param name="connectionString">The connection string used. This connection string must not include the EntityPath property.</param>
+            <param name="path">The path to the HybridConnection.</param>
+            <returns>The created <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener" />.</returns>
+            <exception cref="T:System.ArgumentException">Thrown when the format of the <paramref name="connectionString" /> parameter is incorrect.</exception>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.HybridConnectionListener.Connecting">
+            <summary>
+            Raised when the Listener is attempting to reconnect with ServiceBus after a connection loss.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.HybridConnectionListener.Online">
+            <summary>
+            Raised when the Listener has successfully connected with ServiceBus
+            </summary>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.HybridConnectionListener.Offline">
+            <summary>
+            Raised when the Listener will no longer be attempting to (re)connect with ServiceBus.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.IsOnline">
+            <summary>Gets a value that determines whether the connection is online.</summary>
+            <value>true if the connection is alive and online; false if there 
+            is no connectivity towards the Azure Service Bus from the current network location.</value> 
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.LastError">
+            <summary>Retrieves the last error encountered when trying to reestablish the connection from the offline state.</summary>
+            <value>Returns a <see cref="T:System.Exception" /> that contains the last error.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.AcceptHandler">
+            <summary>
+            Allows installing a custom handler which can inspect request headers, control response headers,
+            decide whether to accept or reject a web-socket upgrade request, and control the status code/description if rejecting.
+            The AcceptHandler should return true to accept a client request or false to reject.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.Address">
+            <summary>
+            Gets the address on which to listen for HybridConnections.  This address should be of the format
+            "sb://contoso.servicebus.windows.net/yourhybridconnection".
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.Proxy">
+            <summary>
+            Gets or sets proxy information for connecting to ServiceBus.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.TokenProvider">
+            <summary>
+            Gets the TokenProvider for authenticating this HybridConnection listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionListener.ConnectionBufferSize">
+            <summary>
+            Gets or sets the connection buffer size.  Default value is 64K.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.OpenAsync">
+            <summary>
+            Opens the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> and registers it as a listener in ServiceBus.
+            Unless specified in the connection string the default is 1 minute.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.OpenAsync(System.TimeSpan)">
+            <summary>
+            Opens the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> and registers it as a listener in ServiceBus.
+            </summary>
+            <param name="timeout">A timeout to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.OpenAsync(System.Threading.CancellationToken)">
+            <summary>
+            Opens the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> and registers it as a listener in ServiceBus.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.CloseAsync">
+            <summary>
+            Closes the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> using the default timeout.
+            Unless specified in the connection string the default is 1 minute.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.CloseAsync(System.TimeSpan)">
+            <summary>
+            Closes the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> using the provided timeout.
+            </summary>
+            <param name="timeout">A timeout to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.CloseAsync(System.Threading.CancellationToken)">
+            <summary>
+            Closes the <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> using the provided CancellationToken.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.AcceptConnectionAsync">
+            <summary>
+            Accepts a new HybridConnection which was initiated by a remote client and returns the Stream.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.ToString">
+            <summary>
+            Returns a string that represents the current object.  Includes a TrackingId for end to end correlation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.GetRuntimeInformationAsync">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation"/> for this HybridConnection entity using the default timeout.
+            Unless specified in the connection string the default is 1 minute.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.GetRuntimeInformationAsync(System.Threading.CancellationToken)">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation"/> for this HybridConnection entity using the provided CancellationToken.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.ControlConnection.EnsureConnectTask(System.Threading.CancellationToken)">
+            <summary>
+            Gets or potentially creates a viable Task&lt;WebSocket&gt;.  If the existing one is faulted or canceled a new one is created.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionListener.ControlConnection.ReceivePumpCoreAsync">
+            <summary>
+            Ensure we have a connected webSocket, listens for command messages, and handles those messages.
+            </summary>
+            <returns>A bool indicating whether or not the receive pump should keep running.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation">
+            <summary>Provides runtime information about a HybridConnection.</summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation.CreatedAt">
+            <summary>Gets the time the HybridConnection was created.</summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation.UpdatedAt">
+            <summary>Gets the time when the HybridConnection was updated.</summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation.ListenerCount">
+            <summary>Gets the number of listeners for this HybridConnection.</summary>
+            <value>The number of listeners for this HybridConnection.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation.RequiresClientAuthorization">
+            <summary>Gets a value indicating whether client authorization is needed for this HybridConnection.</summary>
+            <value>true if client authorization is needed for this HybridConnection; otherwise, false.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionRuntimeInformation.UserMetadata">
+            <summary>Gets the user metadata associated with this instance.</summary>
+            <value>The user metadata associated with this instance.</value>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.HybridConnectionStream">
+            <summary>
+            A Stream representing a connected HybridConnection.  Use it just like any other Stream with the addition of a
+            Shutdown method for notifying the other side of this connection that shutdown is occurring.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.HybridConnectionStream.WriteMode">
+            <summary>
+            Sets or gets the WriteMode for this stream. Default is WriteMode.Binary
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.Shutdown">
+            <summary>
+            Initiates a graceful close process by shutting down sending through this 
+            <see cref="T:Microsoft.Azure.Relay.HybridConnectionStream"/>. To disconnect cleanly and asynchronously, call Shutdown,
+            wait for Read/ReadAsync to complete with a 0 byte read, then finally call Stream.Close();
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.ShutdownAsync(System.Threading.CancellationToken)">
+            <summary>
+            Initiates a graceful close process by shutting down sending through this 
+            <see cref="T:Microsoft.Azure.Relay.HybridConnectionStream"/>. To disconnect cleanly and asynchronously, call ShutdownAsync,
+            wait for Read/ReadAsync to complete with a 0 byte read, then finally call Stream.CloseAsync();
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.ToString">
+            <summary>
+            Returns a string that represents the current object.  Includes a TrackingId for end to end correlation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.Dispose(System.Boolean)">
+            <summary>
+            Closes this <see cref="T:Microsoft.Azure.Relay.HybridConnectionStream"/> instance.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.CloseAsync(System.Threading.CancellationToken)">
+            <summary>
+            Closes this <see cref="T:Microsoft.Azure.Relay.HybridConnectionStream"/> instance asynchronously using a <see cref="T:System.Threading.CancellationToken"/>.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.OnShutdownAsync(System.Threading.CancellationToken)">
+            <summary>
+            Derived classes implement shutdown logic in this method.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.HybridConnectionStream.OnCloseAsync(System.Threading.CancellationToken)">
+            <summary>
+            Derived classes implement close logic in this method.
+            </summary>
+            <param name="cancellationToken">A cancellation token to observe.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.IConnectionStatus">
+            <summary>Describes the current status of a one-way connection.</summary>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.IConnectionStatus.Connecting">
+            <summary>Occurs when the connection is being established.</summary>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.IConnectionStatus.Offline">
+            <summary>Occurs when the connection goes offline.</summary>
+        </member>
+        <member name="E:Microsoft.Azure.Relay.IConnectionStatus.Online">
+            <summary>Occurs when the connection comes online.</summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.IConnectionStatus.IsOnline">
+            <summary>Gets a value that determines whether the connection is online.</summary>
+            <value>true if the connection is alive and online; false if there 
+            is no connectivity towards the Azure Service Bus from the current network location.</value> 
+        </member>
+        <member name="P:Microsoft.Azure.Relay.IConnectionStatus.LastError">
+            <summary>Retrieves the last error encountered when trying to reestablish the connection from the offline state.</summary>
+            <value>Returns a <see cref="T:System.Exception" /> that contains the last error.</value>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.ListenerCommand">
+            <summary>
+            DataContract representation of HybridConnection Listener JSON Commands
+            <para/>
+            Accept:
+            {
+              "accept" : {
+                "address" : "wss://g63-prod-xxx-001-sb.servicebus.windows.net:443/$hc/YourHybridConnection?sb-hc-action=accept&amp;sb-hc-id=GUID_G0_G1",
+                "id" : "GUID_G0_G1",
+                "connectHeaders" : {
+                  "Sec-WebSocket-Key": "l8fWd829IrZbEqUcLejv+Q==",
+                  "Sec-WebSocket-Version": "13",
+                  "Sec-WebSocket-Protocol": "wssubprotocol",
+                  "Connection": "Upgrade",
+                  "Upgrade": "websocket",
+                  "Host": "contoso.servicebus.windows.net:443"
+                }
+              }
+            }
+            <para/>
+            RenewToken:
+            {
+              "renewToken" : {
+                "token" : "SharedAccessSignature sr=http%3a%2f%2fcontoso.servicebus.windows.net%2fHybridConnection1%2f&amp;sig=XXXXXXXXXX%3d&amp;se=1471633754&amp;skn=SasKeyName"
+              }
+            }
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.ListenerCommand.AcceptCommand">
+            <summary>
+            DataContract for JSON such as the following:
+            <para/>
+            {
+              "accept" : {
+                "address" : "wss://g63-prod-xxx-001-sb.servicebus.windows.net:443/$hc/YourHybridConnection?sb-hc-action=accept&amp;sb-hc-id=GUID_G0_G1",
+                "id" : "GUID_G0_G1",
+                "connectHeaders" : {
+                  "Sec-WebSocket-Key": "l8fWd829IrZbEqUcLejv+Q==",
+                  "Sec-WebSocket-Version": "13",
+                  "Sec-WebSocket-Protocol": "wssubprotocol",
+                  "Connection": "Upgrade",
+                  "Upgrade": "websocket",
+                  "Host": "contoso.servicebus.windows.net:443"
+                }
+              }
+            }
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.ListenerCommand.RenewTokenCommand">
+            <summary>
+            DataContract for JSON such as the following:
+            {
+              "renewToken" : {
+                "token" : "SharedAccessSignature sr=http%3a%2f%2fcontoso.servicebus.windows.net%2fHybridConnection1%2f&amp;sig=XXXXXXXXXX%3d&amp;se=1471633754&amp;skn=SasKeyName"
+              }
+            }
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.QuotaExceededException">
+            <summary>
+            An exception indicating a Relay quota has been exceeded.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.QuotaExceededException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.QuotaExceededException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.QuotaExceededException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.QuotaExceededException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.QuotaExceededException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.QuotaExceededException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayConnectionStringBuilder">
+            <summary>
+            Creates and manages the contents of connection strings. You can use this class to construct a connection string 
+            for working with a Relay namespace. It can also be used to perform basic validation on an existing connection string.
+            </summary> 
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayConnectionStringBuilder.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Microsoft.Azure.Relay.RelayConnectionStringBuilder" /> class.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayConnectionStringBuilder.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a <see cref="T:Microsoft.Azure.Relay.RelayConnectionStringBuilder" /> with a specified existing connection string.
+            </summary> 
+            <param name="connectionString">The connection string, which can be obtained from the Azure Management Portal.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if connectionString is null or empty.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            Thrown if <see cref="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.OperationTimeout"/> is a non-positive <see cref="T:System.TimeSpan"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            Thrown if a key value pair is missing either a key or a value.
+            Thrown if <see cref="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.Endpoint"/> is specified but is not a valid absolute <see cref="T:System.Uri"/>.
+            Thrown if <see cref="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.OperationTimeout"/> is specified but is not a valid <see cref="T:System.TimeSpan"/> format.
+            Thrown if an unsupported key name is specified.
+            </exception>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.Endpoint">
+            <summary>Gets or sets the Relay namespace address.</summary>
+            <exception cref="T:System.ArgumentNullException">Thrown if Endpoint is being set to null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if Endpoint is being set to a <see cref="T:System.Uri"/>  which is not absolute.</exception>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.OperationTimeout">
+            <summary>Gets or sets the <see cref="T:System.TimeSpan" /> that specifies how long the operation has to complete before timing out.</summary> 
+            <value>The <see cref="T:System.TimeSpan" /> that specifies how long the operation has to complete before timing out.
+            The default value is one minute.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if OperationTimeout is set to a non-positive TimeSpan.</exception>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.EntityPath">
+            <summary>Gets or sets the entity path for the HybridConnection.</summary> 
+            <value>Returns the entity path.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.SharedAccessKeyName">
+            <summary>Gets or sets the name of the shared access key.</summary>
+            <value>The name of the shared access key.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.SharedAccessKey">
+            <summary>Gets or sets the shared access key for the connection authentication.</summary>
+            <value>The shared access key for the connection authentication.</value>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayConnectionStringBuilder.SharedAccessSignature">
+            <summary>Gets or sets the SAS token.</summary>
+            <value>Returns the configured SAS token.</value>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayConnectionStringBuilder.ToString">
+            <summary>Creates a connectionString that represents the current object.</summary>
+            <returns>A connectionString that represents the current object.</returns>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayedHttpListenerContext">
+            <summary>
+            Provides access to the request and response objects representing a client request to a <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/>.
+            This is modeled after System.Net.HttpListenerContext.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerContext.Request">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.RelayedHttpListenerRequest"/> that represents a client's request for a resource.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerContext.Response">
+            <summary>
+            Gets the <see cref="T:Microsoft.Azure.Relay.RelayedHttpListenerResponse"/> object to control the response to the client's request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayedHttpListenerContext.ToString">
+            <summary>
+            Returns a string that represents the current object.  Includes a TrackingId for end to end correlation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayedHttpListenerContext.GenerateRequestUri">
+            <summary>
+            Form the logical request Uri using the scheme://host:port from the listener and the path from the acceptCommand (minus "/$hc")
+            e.g. sb://contoso.servicebus.windows.net/hybrid1?foo=bar
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayedHttpListenerRequest">
+            <summary>
+            Describes an incoming client request to a <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> object.
+            This is modeled after System.Net.HttpListenerRequest.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerRequest.Headers">
+            <summary>
+            Gets the collection of header name/value pairs received in the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerRequest.Url">
+            <summary>
+            Gets the Uri requested by the client.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayedHttpListenerResponse">
+            <summary>
+            Represents a response to a request being handled by a <see cref="T:Microsoft.Azure.Relay.HybridConnectionListener"/> object.
+            This is modeled after System.Net.HttpListenerResponse.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerResponse.Headers">
+            <summary>
+            Gets the collection of header name/value pairs to be returned by this listener.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerResponse.StatusCode">
+            <summary>Gets or sets the HTTP status code to be returned to the client.</summary>
+            <exception cref="T:System.ObjectDisposedException">This object is closed.</exception>
+            <exception cref="T:System.Net.ProtocolViolationException">The value specified for a set operation is not valid. Valid values are between 100 and 999 inclusive.</exception>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayedHttpListenerResponse.StatusDescription">
+            <summary>Gets or sets a text description of the HTTP status code returned to the client.</summary>
+            <returns>The text description of the HTTP status code returned to the client.</returns>
+            <exception cref="T:System.ArgumentNullException">The value specified for a set operation is null.</exception>
+            <exception cref="T:System.ArgumentException">The value specified for a set operation contains non-printable characters.</exception>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayEventSource">
+            <summary>
+            EventSource for the new Dynamic EventSource type of Microsoft-Azure-Relay traces.
+            
+            The default Level is Informational
+            
+            When defining Start/Stop tasks, the StopEvent.Id must be exactly StartEvent.Id + 1.
+            
+            Do not explicity include the Guid here, since EventSource has a mechanism to automatically
+            map to an EventSource Guid based on the Name (Microsoft-Azure-Relay).  The Guid will 
+            be consistent as long as the name stays Microsoft-Azure-Relay
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.RelayException">
+            <summary>
+            Represents exceptions thrown for for relay errors.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.RelayException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.RelayException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.RelayException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.RelayException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.RelayException.IsTransient">
+            <summary>Gets a value indicating whether the exception is transient. Check this property
+            to determine if the operation should be retried.</summary> 
+            <value>true if the exception is transient; otherwise, false.</value>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.ServerBusyException">
+            <summary>Represents the exception that is thrown when a server is overloaded with logical operations.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ServerBusyException.#ctor">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ServerBusyException"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ServerBusyException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ServerBusyException"/> class with a specified error message.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ServerBusyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.ServerBusyException"/> class with a specified error message and a reference to the inner exception that is the cause of this exception.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+            <param name="innerException">The exception that is the cause of the current exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.Strings">
+            <summary>
+               A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ResourceManager">
+            <summary>
+               Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.Culture">
+            <summary>
+               Overrides the current thread's CurrentUICulture property for all
+               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.AcceptHandlerException">
+            <summary>
+               Looks up a localized string similar to The Listener&apos;s custom AcceptHandler threw an exception. See Listener logs for details. TrackingId: {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ArgumentInvalidCombination">
+            <summary>
+               Looks up a localized string similar to Ensure either all or none of the following arguments are defined: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ArgumentOutOfRange">
+            <summary>
+               Looks up a localized string similar to The argument is out of range. It should be between {0} and {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ArgumentStringTooBig">
+            <summary>
+               Looks up a localized string similar to The argument &apos;{0}&apos; cannot exceed {1} characters..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.CharacterReservedForUriScheme">
+            <summary>
+               Looks up a localized string similar to &apos;{0}&apos; contained character &apos;{1}&apos; which is not allowed because it is reserved in the Uri scheme..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ConnectionStringMustIncludeEntityPath">
+            <summary>
+               Looks up a localized string similar to {0} name should be specified as EntityPath in connectionString..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ConnectionStringMustIncludeTokenProviderSettings">
+            <summary>
+               Looks up a localized string similar to The connectionString must include either SharedAccessSignature or both SharedAccessKeyName and SharedAccessKey..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ConnectionStringMustNotIncludeEntityPath">
+            <summary>
+               Looks up a localized string similar to {0} name should not be specified as EntityPath in the connectionString while using this overload. Instead, use the &apos;path&apos; parameter..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ConnectionStringParameterValueMissing">
+            <summary>
+               Looks up a localized string similar to The value for the connection string parameter &apos;{0}&apos; is empty or missing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ConnectionStringUnknownParameter">
+            <summary>
+               Looks up a localized string similar to The connection string contains unknown parameter &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.DuplicateConnectionId">
+            <summary>
+               Looks up a localized string similar to Duplicate connection ID..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.EntityClosedOrAborted">
+            <summary>
+               Looks up a localized string similar to The operation cannot be performed because the entity has been closed or aborted..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.EntityNameLengthExceedsLimit">
+            <summary>
+               Looks up a localized string similar to The entity path/name &apos;{0}&apos; exceeds the {1} character limit..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InstanceAlreadyRunning">
+            <summary>
+               Looks up a localized string similar to This &apos;{0}&apos; instance has already been started once. To start another instance, please create a new &apos;{0}&apos; object and start that..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InvalidAddressPath">
+            <summary>
+               Looks up a localized string similar to The Uri address given contains a path which is not allowed. Remove the path from the supplied Uri &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InvalidAsyncResult">
+            <summary>
+               Looks up a localized string similar to The specified Async result object is null or invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InvalidEncoding">
+            <summary>
+               Looks up a localized string similar to The string has an invalid encoding format..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InvalidEntityNameFormatWithSlash">
+            <summary>
+               Looks up a localized string similar to The entity name or path cannot contain &apos;/&apos; as prefix or suffix. The supplied value is &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.InvalidUriScheme">
+            <summary>
+               Looks up a localized string similar to The provided URI scheme &apos;{0}&apos; is invalid; expected &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_InvalidStatus">
+            <summary>
+               Looks up a localized string similar to The status code must be between 100 and 999 inclusive..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_log_exception">
+            <summary>
+               Looks up a localized string similar to Exception in {0}::{1} - {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_securityprotocolnotsupported">
+            <summary>
+               Looks up a localized string similar to The requested security protocol is not supported..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_uri_NotAbsolute">
+            <summary>
+               Looks up a localized string similar to This operation is not supported for a relative URI..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebHeaderInvalidControlChars">
+            <summary>
+               Looks up a localized string similar to Specified value has invalid Control characters..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_AcceptUnsupportedProtocol">
+            <summary>
+               Looks up a localized string similar to The WebSocket request or response operation was called with unsupported protocol(s)..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_Websockets_AlreadyOneOutstandingOperation">
+            <summary>
+               Looks up a localized string similar to There is already one outstanding &apos;{0}&apos; call for this WebSocket instance. ReceiveAsync and SendAsync can be called simultaneously, but at most one outstanding operation for each of them is allowed at the same time..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_AlreadyStarted">
+            <summary>
+               Looks up a localized string similar to The WebSocket has already been started..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_Argument_InvalidMessageType">
+            <summary>
+               Looks up a localized string similar to The message type &apos;{0}&apos; is not allowed for the &apos;{1}&apos; operation. Valid message types are: &apos;{2}, {3}&apos;. To close the WebSocket, use the &apos;{4}&apos; operation instead..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_ArgumentOutOfRange_InternalBuffer">
+            <summary>
+               Looks up a localized string similar to The byte array must have a length of at least &apos;{0}&apos; bytes..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_ArgumentOutOfRange_TooBig">
+            <summary>
+               Looks up a localized string similar to The value of the &apos;{0}&apos; parameter ({1}) must be less than or equal to {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_ArgumentOutOfRange_TooSmall">
+            <summary>
+               Looks up a localized string similar to The argument must be a value greater than {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_Connect101Expected">
+            <summary>
+               Looks up a localized string similar to The server returned status code &apos;{0}&apos; when status code &apos;101&apos; was expected..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_Generic">
+            <summary>
+               Looks up a localized string similar to An internal WebSocket error occurred. Please see the innerException, if present, for more details..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidCharInProtocolString">
+            <summary>
+               Looks up a localized string similar to The WebSocket protocol &apos;{0}&apos; is invalid because it contains the invalid character &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidCloseStatusCode">
+            <summary>
+               Looks up a localized string similar to The close status code &apos;{0}&apos; is reserved for system use only and cannot be specified when calling this method..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidCloseStatusDescription">
+            <summary>
+               Looks up a localized string similar to The close status description &apos;{0}&apos; is too long. The UTF8-representation of the status description must not be longer than {1} bytes..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidEmptySubProtocol">
+            <summary>
+               Looks up a localized string similar to Empty string is not a valid subprotocol value. Please use \&quot;null\&quot; to specify no value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidRegistration">
+            <summary>
+               Looks up a localized string similar to The WebSocket schemes must be registered with the HttpWebRequest class..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidResponseHeader">
+            <summary>
+               Looks up a localized string similar to The &apos;{0}&apos; header value &apos;{1}&apos; is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidState">
+            <summary>
+               Looks up a localized string similar to The WebSocket is in an invalid state (&apos;{0}&apos;) for this operation. Valid states are: &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_InvalidState_ClosedOrAborted">
+            <summary>
+               Looks up a localized string similar to The &apos;{0}&apos; instance cannot be used for communication because it has been transitioned into the &apos;{1}&apos; state..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_NoDuplicateProtocol">
+            <summary>
+               Looks up a localized string similar to Duplicate protocols are not allowed: &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_NotConnected">
+            <summary>
+               Looks up a localized string similar to The WebSocket is not connected..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_ReasonNotNull">
+            <summary>
+               Looks up a localized string similar to The close status description &apos;{0}&apos; is invalid. When using close status code &apos;{1}&apos; the description must be null..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_Scheme">
+            <summary>
+               Looks up a localized string similar to Only Uris starting with &apos;ws://&apos; or &apos;wss://&apos; are supported..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_WebSockets_UnsupportedPlatform">
+            <summary>
+               Looks up a localized string similar to The WebSocket protocol is not supported on this platform..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.net_webstatus_ConnectFailure">
+            <summary>
+               Looks up a localized string similar to Unable to connect to the remote server.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.NotValidAbsoluteUri">
+            <summary>
+               Looks up a localized string similar to &apos;{0}&apos; is not a valid Absolute Uri..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.NotValidTimeSpan">
+            <summary>
+               Looks up a localized string similar to &apos;{0}&apos; is not a valid TimeSpan..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ObjectClosedOrAborted">
+            <summary>
+               Looks up a localized string similar to The operation cannot be performed because the object has been closed or aborted..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ObjectIsReadOnly">
+            <summary>
+               Looks up a localized string similar to This object is read-only and cannot be modified..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.ObjectNotOpened">
+            <summary>
+               Looks up a localized string similar to This object is not in an open state..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.RequestTimedOut">
+            <summary>
+               Looks up a localized string similar to The request has timed out after {0} milliseconds. The successful completion of the request cannot be determined. Additional queries should be made to determine whether or not the operation has succeeded. For more information on exception types and proper exception handling, please refer to http://go.microsoft.com/fwlink/?LinkId=761101.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.SasTokenShouldBeAlone">
+            <summary>
+               Looks up a localized string similar to {0} cannot be specified along with {1}. {0} alone should be sufficient to Authenticate the request..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.TimeoutMustBeNonNegative">
+            <summary>
+               Looks up a localized string similar to Argument {0} must be a non-negative timeout value. The provided value was {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.TimeoutMustBePositive">
+            <summary>
+               Looks up a localized string similar to Argument {0} must be a positive timeout value. The provided value was {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.TokenMissingAudience">
+            <summary>
+               Looks up a localized string similar to The provided token does not specify the &apos;Audience&apos; value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.TokenMissingExpiresOn">
+            <summary>
+               Looks up a localized string similar to The provided token does not specify the &apos;ExpiresOn&apos; value..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.Strings.TokenProviderRequired">
+            <summary>
+               Looks up a localized string similar to A TokenProvider is required to perform management operations.  If a connection string was provided it must include either SharedAccessSignature or both SharedAccessKeyName and SharedAccessKey..
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.WriteMode">
+            <summary>
+            WriteMode options for HybridConnectionStream
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WriteMode.Text">
+            <summary>
+            Write Text Frames on the WebSocket
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WriteMode.Binary">
+            <summary>
+            Write Binary frames on the WebSocket
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ExceptionExtensions.Rethrow(System.Exception)">
+            <summary>
+            Rethrow the Exception while preserving the previous throw location. The following string is inserted in the
+            stack trace to indicate the restore point: "End of stack trace from the previous location where the 
+            exception was thrown". This is similar to the way inner exceptions or marshaled exceptions are indicated in stack traces.
+            <para />This method always throws an exception.  It has a return value in order to write calling code like below
+            so that the compiler also knows the code doesn't continue after this call:
+            <para/>
+            throw exception.Rethrow();
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.ExceptionExtensions.ThrowException(System.Exception)">
+            <summary>
+            ThrowException is a helper/wrapper method that simply calls "throw exception;".  This wrapper method exists so that 
+            the calling method (Rethrow) will indeed get inlined (having a direct throw in Rethrow causes it to not be inlined any more).
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.SecurityToken">
+            <summary>
+            Provides information about a security token such as audience, expiry time, and the string token value.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.SecurityToken.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:Microsoft.Azure.Relay.SecurityToken"/> class.
+            </summary>
+            <param name="tokenString">A token in string format.</param>
+            <param name="audienceFieldName">The key name for the audience field.</param>
+            <param name="expiresOnFieldName">The key name for the expires on field.</param>
+            <param name="keyValueSeparator">The separator between keys and values.</param>
+            <param name="pairSeparator">The separator between different key/value pairs.</param>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.SecurityToken.Audience">
+            <summary>
+            Gets the audience of this token.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.SecurityToken.ExpiresAtUtc">
+            <summary>
+            Gets the expiration time of this token.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.SecurityToken.TokenString">
+            <summary>
+            Gets the actual token as a string.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.SharedAccessSignatureTokenProvider">
+            <summary>
+            The SharedAccessSignatureTokenProvider generates tokens using a shared access key or existing signature.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.SharedAccessSignatureTokenProvider.SharedAccessSignatureToken">
+            <summary>
+            A WCF SecurityToken that wraps a Shared Access Signature
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.StringExtensions.EnsureEndsWith(System.String,System.String,System.StringComparison)">
+            <summary>
+            Ensures the given string ends with the requested pattern.  If it does no allocations are performed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync(System.Func{System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult},System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+            <param name="begin"></param>
+            <param name="end"></param>
+            <param name="state"> 
+            This parameter helps reduce allocations by passing state to the Funcs. e.g.:
+             await TaskEx.FromAsync(
+                 (c, s) => ((Transaction)s).BeginCommit(c, s),
+                 (a) => ((Transaction)a.AsyncState).EndCommit(a),
+                 transaction);
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``1(System.Func{``0,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult},``0,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``2(System.Func{``0,``1,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult},``0,``1,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``3(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Action{System.IAsyncResult},``0,``1,``2,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``1(System.Func{System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``0},System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``2(System.Func{``0,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``1},``0,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``3(System.Func{``0,``1,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``2},``0,``1,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromAsync``4(System.Func{``0,``1,``2,System.AsyncCallback,System.Object,System.IAsyncResult},System.Func{System.IAsyncResult,``3},``0,``1,``2,System.Object)">
+            <summary>
+            Create a Task based on Begin/End IAsyncResult pattern.
+            This is a wrapper around Task.Factory.FromAsync with the additional guarantee that if the begin delegate
+            throws an Exception it will result in a Task with that exception instead of the exception being thrown from this method.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromException(System.Exception)">
+            <summary>
+            Creates a Task that has completed with a specified exception.
+            Once the code has moved to .NET 4.6 just use Task.FromException;
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TaskEx.FromException``1(System.Exception)">
+            <summary>
+            Creates a Task&lt;TResult&gt; that's completed with a specified exception.
+            Once the code has moved to .NET 4.6 just use Task.FromException&lt;TResult&gt;
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.TokenProvider">
+            <summary>
+            This abstract base class can be extended to implement additional token providers.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TokenProvider.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:Microsoft.Azure.Relay.TokenProvider" /> class. </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.TokenProvider.ThisLock">
+            <summary>
+            Gets the synchronization object for the given instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String)">
+            <summary>
+            Construct a TokenProvider based on a sharedAccessSignature.
+            </summary>
+            <param name="sharedAccessSignature">The shared access signature</param>
+            <returns>A TokenProvider initialized with the shared access signature</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TokenProvider.CreateSharedAccessSignatureTokenProvider(System.String,System.String)">
+            <summary>
+            Construct a TokenProvider based on the provided Key Name and Shared Access Key.
+            </summary>
+            <param name="keyName">The key name of the corresponding SharedAccessKeyAuthorizationRule.</param>
+            <param name="sharedAccessKey">The key associated with the SharedAccessKeyAuthorizationRule</param>
+            <returns>A TokenProvider initialized with the provided RuleId and Password</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TokenProvider.GetTokenAsync(System.String,System.TimeSpan)">
+            <summary>
+            Gets a <see cref="T:Microsoft.Azure.Relay.SecurityToken"/> for the given audience and duration.
+            </summary>
+            <param name="audience">The target audience for the security token.</param>
+            <param name="validFor">How long the generated token should be valid for.</param>
+            <returns>A Task returning the newly created SecurityToken.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TokenProvider.OnGetTokenAsync(System.String,System.TimeSpan)">
+            <summary>
+            Implemented by derived TokenProvider types to generate their SecurityTokens.
+            </summary>
+            <param name="audience">The target audience for the security token.</param>
+            <param name="validFor">How long the generated token should be valid for.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TrackingContext.Create">
+            <summary>
+            Create a TrackingContext with a new Guid/TrackingId and no subsystemId.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TrackingContext.Create(System.Uri)">
+            <summary>
+            Create a TrackingContext with a new Guid/TrackingId and given subsystemId.
+            </summary>
+            <param name="subsystemId">subsystem-specific Uri like entity address to be used in the tracking context</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TrackingContext.Create(System.String)">
+            <summary>
+            Create a TrackingContext with a new Guid/TrackingId and given subsystemId.
+            </summary>
+            <param name="subsystemId">subsystem-specific identifier to be used in the tracking context</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TrackingContext.RemoveSuffix(System.String)">
+            <summary>
+            Given a trackingId string with "_GXX" suffix remove that suffix.
+            Example: "1c048eb5-77c4-4b85-96fd-fa526801af35_G0" becomes "1c048eb5-77c4-4b85-96fd-fa526801af35"
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.TrackingContext.CreateTrackableErrorMessage(System.String)">
+            <summary>
+            Ensures the given string contains a TrackingId. If one is already present, nothing occurs.
+            Otherwise TrackingId, Timestamp, and if present, SystemTracker are added.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.WebSockets.AsyncEventArgsNetworkStream">
+            <summary>
+            A custom network stream that stores and reuses a single SocketAsyncEventArgs instance
+            for reads and a single SocketAsyncEventArgs instance for writes.  This limits it to
+            supporting a single read and a single write at a time, but with much less per-operation
+            overhead than with System.Net.Sockets.NetworkStream.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket">
+            <summary>A managed implementation of a web socket that sends and receives data via a <see cref="T:System.IO.Stream"/>.</summary>
+            <remarks>
+            Thread-safety:
+            - It's acceptable to call ReceiveAsync and SendAsync in parallel.  One of each may run concurrently.
+            - It's acceptable to have a pending ReceiveAsync while CloseOutputAsync or CloseAsync is called.
+            - Attemping to invoke any other operations in parallel may corrupt the instance.  Attempting to invoke
+              a send operation while another is in progress or a receive operation while another is in progress will
+              result in an exception.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.CreateFromConnectedStream(System.IO.Stream,System.Boolean,System.String,System.TimeSpan,System.Int32,System.Nullable{System.ArraySegment{System.Byte}})">
+            <summary>Creates a <see cref="T:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket"/> from a <see cref="T:System.IO.Stream"/> connected to a websocket endpoint.</summary>
+            <param name="stream">The connected Stream.</param>
+            <param name="isServer">true if this is the server-side of the connection; false if this is the client-side of the connection.</param>
+            <param name="subprotocol">The agreed upon subprotocol for the connection.</param>
+            <param name="keepAliveInterval">The interval to use for keep-alive pings.</param>
+            <param name="receiveBufferSize">The buffer size to use for received data.</param>
+            <param name="receiveBuffer">Optional buffer to use for receives.</param>
+            <returns>The created <see cref="T:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket"/> instance.</returns>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.t_headerMask">
+            <summary>Per-thread cached 4-byte mask byte array.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_random">
+            <summary>Thread-safe random number generator used to generate masks for each send.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_textEncoding">
+            <summary>Encoding for the payload of text messages: UTF8 encoding that throws if invalid bytes are discovered, per the RFC.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_validSendStates">
+            <summary>Valid states to be in when calling SendAsync.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_validReceiveStates">
+            <summary>Valid states to be in when calling ReceiveAsync.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_validCloseOutputStates">
+            <summary>Valid states to be in when calling CloseOutputAsync.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.s_validCloseStates">
+            <summary>Valid states to be in when calling CloseAsync.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MaxMessageHeaderLength">
+            <summary>The maximum size in bytes of a message frame header that includes mask bytes.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MaxControlPayloadLength">
+            <summary>The maximum size of a control message payload.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MaskLength">
+            <summary>Length of the mask XOR'd with the payload data.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._stream">
+            <summary>The stream used to communicate with the remote server.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._isServer">
+            <summary>
+            true if this is the server-side of the connection; false if it's client.
+            This impacts masking behavior: clients always mask payloads they send and
+            expect to always receive unmasked payloads, whereas servers always send
+            unmasked payloads and expect to always receive masked payloads.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._subprotocol">
+            <summary>The agreed upon subprotocol with the server.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._keepAliveTimer">
+            <summary>Timer used to send periodic pings to the server, at the interval specified</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._abortSource">
+            <summary>CancellationTokenSource used to abort all current and future operations when anything is canceled or any error occurs.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receiveBuffer">
+            <summary>Buffer used for reading data from the network.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receiveBufferFromPool">
+            <summary>Gets whether the receive buffer came from the ArrayPool.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._utf8TextState">
+            <summary>
+            Tracks the state of the validity of the UTF8 encoding of text payloads.  Text may be split across fragments.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._sendFrameAsyncLock">
+            <summary>
+            Semaphore used to ensure that calls to SendFrameAsync don't run concurrently.  While <see cref="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastSendAsync"/>
+            is used to fail if a caller tries to issue another SendAsync while a previous one is running, internally
+            we use SendFrameAsync as an implementation detail, and it should not cause user requests to SendAsync to fail,
+            nor should such internal usage be allowed to run concurrently with other internal usage or with SendAsync.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._state">
+            <summary>The current state of the web socket in the protocol.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._disposed">
+            <summary>true if Dispose has been called; otherwise, false.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._sentCloseFrame">
+            <summary>Whether we've ever sent a close frame.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receivedCloseFrame">
+            <summary>Whether we've ever received a close frame.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._closeStatus">
+            <summary>The reason for the close, as sent by the server, or null if not yet closed.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._closeStatusDescription">
+            <summary>A description of the close reason as sent by the server, or null if not yet closed.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastReceiveHeader">
+            <summary>
+            The last header received in a ReceiveAsync.  If ReceiveAsync got a header but then
+            returned fewer bytes than was indicated in the header, subsequent ReceiveAsync calls
+            will use the data from the header to construct the subsequent receive results, and
+            the payload length in this header will be decremented to indicate the number of bytes
+            remaining to be received for that header.  As a result, between fragments, the payload
+            length in this header should be 0.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receiveBufferOffset">
+            <summary>The offset of the next available byte in the _receiveBuffer.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receiveBufferCount">
+            <summary>The number of bytes available in the _receiveBuffer.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._receivedMaskOffsetOffset">
+            <summary>
+            When dealing with partially read fragments of binary/text messages, a mask previously received may still
+            apply, and the first new byte received may not correspond to the 0th position in the mask.  This value is
+            the next offset into the mask that should be applied.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._sendBuffer">
+            <summary>
+            Temporary send buffer.  This should be released back to the ArrayPool once it's
+            no longer needed for the current send operation.  It is stored as an instance
+            field to minimize needing to pass it around and to avoid it becoming a field on
+            various async state machine objects.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastSendWasFragment">
+            <summary>
+            Whether the last SendAsync had endOfMessage==false. We need to track this so that we
+            can send the subsequent message with a continuation opcode if the last message was a fragment.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastSendAsync">
+            <summary>
+            The task returned from the last SendAsync operation to not complete synchronously.
+            If this is not null and not completed when a subsequent SendAsync is issued, an exception occurs.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastReceiveAsync">
+            <summary>
+            The task returned from the last ReceiveAsync operation to not complete synchronously.
+            If this is not null and not completed when a subsequent ReceiveAsync is issued, an exception occurs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.StateUpdateLock">
+            <summary>Lock used to protect update and check-and-update operations on _state.</summary>
+        </member>
+        <member name="P:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ReceiveAsyncLock">
+            <summary>
+            We need to coordinate between receives and close operations happening concurrently, as a ReceiveAsync may
+            be pending while a Close{Output}Async is issued, which itself needs to loop until a close frame is received.
+            As such, we need thread-safety in the management of <see cref="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket._lastReceiveAsync"/>. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.#ctor(System.IO.Stream,System.Boolean,System.String,System.TimeSpan,System.Int32,System.Nullable{System.ArraySegment{System.Byte}})">
+            <summary>Initializes the websocket.</summary>
+            <param name="stream">The connected Stream.</param>
+            <param name="isServer">true if this is the server-side of the connection; false if this is the client-side of the connection.</param>
+            <param name="subprotocol">The agreed upon subprotocol for the connection.</param>
+            <param name="keepAliveInterval">The interval to use for keep-alive pings.</param>
+            <param name="receiveBufferSize">The buffer size to use for received data.</param>
+            <param name="receiveBuffer">Optional buffer to use for receives</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.SendFrameAsync(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageOpcode,System.Boolean,System.ArraySegment{System.Byte},System.Threading.CancellationToken)">
+            <summary>Sends a websocket frame to the network.</summary>
+            <param name="opcode">The opcode for the message.</param>
+            <param name="endOfMessage">The value of the FIN bit for the message.</param>
+            <param name="payloadBuffer">The buffer containing the payload data fro the message.</param>
+            <param name="cancellationToken">The CancellationToken to use to cancel the websocket.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.SendFrameLockAcquiredNonCancelableAsync(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageOpcode,System.Boolean,System.ArraySegment{System.Byte})">
+            <summary>Sends a websocket frame to the network. The caller must hold the sending lock.</summary>
+            <param name="opcode">The opcode for the message.</param>
+            <param name="endOfMessage">The value of the FIN bit for the message.</param>
+            <param name="payloadBuffer">The buffer containing the payload data fro the message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.WriteFrameToSendBuffer(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageOpcode,System.Boolean,System.ArraySegment{System.Byte})">
+            <summary>Writes a frame into the send buffer, which can then be sent over the network.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.WriteRandomMask(System.Byte[],System.Int32)">
+            <summary>Writes a 4-byte random mask to the specified buffer at the specified offset.</summary>
+            <param name="buffer">The buffer to which to write the mask.</param>
+            <param name="offset">The offset into the buffer at which to write the mask.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate(System.ArraySegment{System.Byte},System.Threading.CancellationToken)">
+            <summary>
+            Receive the next text, binary, continuation, or close message, returning information about it and
+            writing its payload into the supplied buffer.  Other control messages may be consumed and processed
+            as part of this operation, but data about them will not be returned.
+            </summary>
+            <param name="payloadBuffer">The buffer into which payload data should be written.</param>
+            <param name="cancellationToken">The CancellationToken used to cancel the websocket.</param>
+            <returns>Information about the received message.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.HandleReceivedCloseAsync(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageHeader,System.Threading.CancellationToken)">
+            <summary>Processes a received close message.</summary>
+            <param name="header">The message header.</param>
+            <param name="cancellationToken">The cancellation token to use to cancel the websocket.</param>
+            <returns>The received result message.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.HandleReceivedPingPongAsync(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageHeader,System.Threading.CancellationToken)">
+            <summary>Processes a received ping or pong message.</summary>
+            <param name="header">The message header.</param>
+            <param name="cancellationToken">The cancellation token to use to cancel the websocket.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.IsValidCloseStatus(System.Net.WebSockets.WebSocketCloseStatus)">
+            <summary>Check whether a close status is valid according to the RFC.</summary>
+            <param name="closeStatus">The status to validate.</param>
+            <returns>true if the status if valid; otherwise, false.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.CloseWithReceiveErrorAndThrowAsync(System.Net.WebSockets.WebSocketCloseStatus,System.Net.WebSockets.WebSocketError,System.Threading.CancellationToken,System.Exception)">
+            <summary>Send a close message to the server and throw an exception, in response to getting bad data from the server.</summary>
+            <param name="closeStatus">The close status code to use.</param>
+            <param name="error">The error reason.</param>
+            <param name="cancellationToken">The CancellationToken used to cancel the websocket.</param>
+            <param name="innerException">An optional inner exception to include in the thrown exception.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.TryParseMessageHeaderFromReceiveBuffer(Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MessageHeader@)">
+            <summary>Parses a message header from the buffer.  This assumes the header is in the buffer.</summary>
+            <param name="resultHeader">The read header.</param>
+            <returns>true if a header was read; false if the header was invalid.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.CloseAsyncPrivate(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)">
+            <summary>Send a close message, then receive until we get a close response message.</summary>
+            <param name="closeStatus">The close status to send.</param>
+            <param name="statusDescription">The close status description to send.</param>
+            <param name="cancellationToken">The CancellationToken to use to cancel the websocket.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.SendCloseFrameAsync(System.Net.WebSockets.WebSocketCloseStatus,System.String,System.Threading.CancellationToken)">
+            <summary>Sends a close message to the server.</summary>
+            <param name="closeStatus">The close status to send.</param>
+            <param name="closeStatusDescription">The close status description to send.</param>
+            <param name="cancellationToken">The CancellationToken to use to cancel the websocket.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.AllocateSendBuffer(System.Int32)">
+            <summary>Gets a send buffer from the pool.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ReleaseSendBuffer">
+            <summary>Releases the send buffer to the pool.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ApplyMask(System.Byte[],System.Int32,System.Byte[],System.Int32,System.Int32,System.Int64)">
+            <summary>Applies a mask to a portion of a byte array.</summary>
+            <param name="toMask">The buffer to which the mask should be applied.</param>
+            <param name="toMaskOffset">The offset into <paramref name="toMask"/> at which the mask should start to be applied.</param>
+            <param name="mask">The array containing the mask to apply.</param>
+            <param name="maskOffset">The offset into <paramref name="mask"/> of the mask to apply of length <see cref="F:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.MaskLength"/>.</param>
+            <param name="maskOffsetIndex">The next position offset from <paramref name="maskOffset"/> of which by to apply next from the mask.</param>
+            <param name="count">The number of bytes starting from <paramref name="toMaskOffset"/> to which the mask should be applied.</param>
+            <returns>The updated maskOffsetOffset value.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ApplyMask(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>Applies a mask to a portion of a byte array.</summary>
+            <param name="toMask">The buffer to which the mask should be applied.</param>
+            <param name="toMaskOffset">The offset into <paramref name="toMask"/> at which the mask should start to be applied.</param>
+            <param name="mask">The four-byte mask, stored as an Int32.</param>
+            <param name="maskIndex">The index into the mask.</param>
+            <param name="count">The number of bytes to mask.</param>
+            <returns>The next index into the mask to be used for future applications of the mask.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.ThrowIfOperationInProgress(System.Threading.Tasks.Task,System.String)">
+            <summary>Aborts the websocket and throws an exception if an existing operation is in progress.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.ManagedWebSocket.CreateOperationCanceledException(System.Exception,System.Threading.CancellationToken)">
+            <summary>Creates an OperationCanceledException instance, using a default message and the specified inner exception and token.</summary>
+        </member>
+        <member name="T:Microsoft.Azure.Relay.WebSockets.NetEventSource">
+            <summary>Provides logging facilities for System.Net libraries.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.NetEventSource.Log">
+            <summary>The single event source instance to use for all logging.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Enter(System.Object,System.FormattableString,System.String)">
+            <summary>Logs entrance to a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="formattableString">A description of the entrance, including any arguments to the call.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Enter(System.Object,System.Object,System.String)">
+            <summary>Logs entrance to a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="arg0">The object to log.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Enter(System.Object,System.Object,System.Object,System.String)">
+            <summary>Logs entrance to a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="arg0">The first object to log.</param>
+            <param name="arg1">The second object to log.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Enter(System.Object,System.Object,System.Object,System.Object,System.String)">
+            <summary>Logs entrance to a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="arg0">The first object to log.</param>
+            <param name="arg1">The second object to log.</param>
+            <param name="arg2">The third object to log.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Exit(System.Object,System.FormattableString,System.String)">
+            <summary>Logs exit from a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="formattableString">A description of the exit operation, including any return values.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Exit(System.Object,System.Object,System.String)">
+            <summary>Logs exit from a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="arg0">A return value from the member.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Exit(System.Object,System.Object,System.Object,System.String)">
+            <summary>Logs exit from a method.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="arg0">A return value from the member.</param>
+            <param name="arg1">A second return value from the member.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Info(System.Object,System.FormattableString,System.String)">
+            <summary>Logs an information message.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="formattableString">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Info(System.Object,System.Object,System.String)">
+            <summary>Logs an information message.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="message">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Error(System.Object,System.FormattableString,System.String)">
+            <summary>Logs an error message.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="formattableString">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Error(System.Object,System.Object,System.String)">
+            <summary>Logs an error message.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="message">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Fail(System.Object,System.FormattableString,System.String)">
+            <summary>Logs a fatal error and raises an assert.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="formattableString">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Fail(System.Object,System.Object,System.String)">
+            <summary>Logs a fatal error and raises an assert.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="message">The message to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.DumpBuffer(System.Object,System.Byte[],System.String)">
+            <summary>Logs the contents of a buffer.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="buffer">The buffer to be logged.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.DumpBuffer(System.Object,System.Byte[],System.Int32,System.Int32,System.String)">
+            <summary>Logs the contents of a buffer.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="buffer">The buffer to be logged.</param>
+            <param name="offset">The starting offset from which to log.</param>
+            <param name="count">The number of bytes to log.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.DumpBuffer(System.Object,System.IntPtr,System.Int32,System.String)">
+            <summary>Logs the contents of a buffer.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="bufferPtr">The starting location of the buffer to be logged.</param>
+            <param name="count">The number of bytes to log.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Associate(System.Object,System.Object,System.String)">
+            <summary>Logs a relationship between two objects.</summary>
+            <param name="first">The first object.</param>
+            <param name="second">The second object.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.NetEventSource.Associate(System.Object,System.Object,System.Object,System.String)">
+            <summary>Logs a relationship between two objects.</summary>
+            <param name="thisOrContextObject">`this`, or another object that serves to provide context for the operation.</param>
+            <param name="first">The first object.</param>
+            <param name="second">The second object.</param>
+            <param name="memberName">The calling member.</param>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.t_cachedStringBuilder">
+            <summary>Per-thread cached StringBuilder for building of strings to send on the connection.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.s_defaultHttpEncoding">
+            <summary>Default encoding for HTTP requests. Latin alphabeta no 1, ISO/IEC 8859-1.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.DefaultReceiveBufferSize">
+            <summary>Size of the receive buffer to use.</summary>
+        </member>
+        <member name="F:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.WSServerGuid">
+            <summary>GUID appended by the server as part of the security key response.  Defined in the RFC.</summary>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.ConnectSocketAsync(System.String,System.Int32,System.Threading.CancellationToken)">
+            <summary>Connects a socket to the specified host and port, subject to cancellation and aborting.</summary>
+            <param name="host">The host to which to connect.</param>
+            <param name="port">The port to which to connect on the host.</param>
+            <param name="cancellationToken">The CancellationToken to use to cancel the websocket.</param>
+            <returns>The connected Socket.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.BuildRequestHeader(System.Uri,Microsoft.Azure.Relay.WebSockets.ClientWebSocketOptions,System.String)">
+            <summary>Creates a byte[] containing the headers to send to the server.</summary>
+            <param name="uri">The Uri of the server.</param>
+            <param name="options">The options used to configure the websocket.</param>
+            <param name="secKey">The generated security key to send in the Sec-WebSocket-Key header.</param>
+            <returns>The byte[] containing the encoded headers ready to send to the network.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.CreateSecKeyAndSecWebSocketAccept">
+            <summary>
+            Creates a pair of a security key for sending in the Sec-WebSocket-Key header and
+            the associated response we expect to receive as the Sec-WebSocket-Accept header value.
+            </summary>
+            <returns>A key-value pair of the request header security key and expected response header value.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.ParseAndValidateConnectResponseAsync(System.IO.Stream,Microsoft.Azure.Relay.WebSockets.ClientWebSocketOptions,System.String,System.Threading.CancellationToken)">
+            <summary>Read and validate the connect response headers from the server.</summary>
+            <param name="stream">The stream from which to read the response headers.</param>
+            <param name="options">The options used to configure the websocket.</param>
+            <param name="expectedSecWebSocketAccept">The expected value of the Sec-WebSocket-Accept header.</param>
+            <param name="cancellationToken">The CancellationToken to use to cancel the websocket.</param>
+            <returns>The agreed upon subprotocol with the server, or null if there was none.</returns>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.ValidateAndTrackHeader(System.String,System.String,System.String,System.String,System.Boolean@)">
+            <summary>Validates a received header against expected values and tracks that we've received it.</summary>
+            <param name="targetHeaderName">The header name against which we're comparing.</param>
+            <param name="targetHeaderValue">The header value against which we're comparing.</param>
+            <param name="foundHeaderName">The actual header name received.</param>
+            <param name="foundHeaderValue">The actual header value received.</param>
+            <param name="foundHeader">A bool tracking whether this header has been seen.</param>
+        </member>
+        <member name="M:Microsoft.Azure.Relay.WebSockets.WebSocketHandle.ReadResponseHeaderLineAsync(System.IO.Stream,System.Threading.CancellationToken)">
+            <summary>Reads a line from the stream.</summary>
+            <param name="stream">The stream from which to read.</param>
+            <param name="cancellationToken">The CancellationToken used to cancel the websocket.</param>
+            <returns>The read line, or null if none could be read.</returns>
+        </member>
+    </members>
+</doc>

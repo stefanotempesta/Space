@@ -1,0 +1,2 @@
+D:\temp\MsdnDataIntegrationPatterns\DataIntegration\obj\Debug\DataIntegration.csprojResolveAssemblyReference.cache
+D:\temp\MsdnDataIntegrationPatterns\DataIntegration\obj\Debug\DataIntegration.csproj.CoreCompileInputs.cache
