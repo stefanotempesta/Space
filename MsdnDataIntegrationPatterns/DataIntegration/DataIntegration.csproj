@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Broadcast.cs" />
+    <Compile Include="CorrelationService.cs" />
     <Compile Include="Entities\CustomerEntity.cs" />
     <Compile Include="Entities\ParcelTrackingEntity.cs" />
     <Compile Include="Entities\Entity.cs" />

@@ -17,17 +17,13 @@ namespace MsdnDataIntegrationPatterns.DataIntegration
             client.OnMessageAsync(async message =>
             {
                 CustomerRecord customerRecord = JsonConvert.DeserializeObject<CustomerRecord>(message.GetBody<string>());
+                Guid correlationId = (Guid)message.Properties["CorrelationId"];
 
-                if (CustomerRecordExists(customerRecord))
+                if (new CorrelationService().CustomerExists(correlationId))
                 {
                     await SaveAsync(customerRecord);
                 }
             });
-        }
-
-        private bool CustomerRecordExists(CustomerRecord customerRecord)
-        {
-            throw new NotImplementedException();
         }
 
         private Task SaveAsync(CustomerRecord customerRecord)

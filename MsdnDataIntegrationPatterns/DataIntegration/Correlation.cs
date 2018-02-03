@@ -20,6 +20,10 @@ namespace MsdnDataIntegrationPatterns.DataIntegration
             // Serialize the customer record and send the message to the Topic
             var client = TopicClient.CreateFromConnectionString(connectionString, topicName);
             var message = new BrokeredMessage(JsonConvert.SerializeObject(customerRecord));
+
+            // Register the customer record with the Correlation Service and obtain a Correlation ID
+            message.Properties["CorrelationId}"] = new CorrelationService().RegisterCustomer(customerRecord, subscriptionName);
+
             await client.SendAsync(message);
         }
 
@@ -37,6 +41,7 @@ namespace MsdnDataIntegrationPatterns.DataIntegration
 
         private readonly string connectionString = "<ConnectionString>";
         private readonly string topicName = "<TopicName>";
+        private readonly string subscriptionName = "<SubscriptionName>";
 
         private MockDatabaseContext db = new MockDatabaseContext();
     }
