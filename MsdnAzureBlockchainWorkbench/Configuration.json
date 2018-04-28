@@ -1,0 +1,59 @@
+{
+"Properties": {
+            "State": {
+                "Type": "state"
+            },
+            "Owner": {
+                "Type": "user"
+            },
+            "Description": {
+                "Type": "string"
+            },
+            "AskingPrice": {
+                "Type": "money"
+            },
+            "Buyer": {
+                "Type": "user"
+            },
+            "OfferPrice": {
+                "Type": "money"
+            },
+            "Inspector": {
+                "Type": "user"
+            },
+            "Appraiser": {
+                "Type": "user"
+            }
+        },
+"Constructor": {
+            "description": {
+                "Type": "string"
+            },
+            "price": {
+                "Type": "money"
+            }
+        },
+"MakeOffer": {
+                "Parameters": {
+                    "inspector": {
+                        "Type": "user"
+                    },
+                    "appraiser": {
+                        "Type": "user"
+                    },
+                    "offerPrice": {
+                        "Type": "money"
+                    }
+               }
+        },
+"Chains": {
+            "Ethereum": {
+                "Type": "Ethereum",
+                "Version": "1.0",
+                "Location": "AssetTransfer.sol",
+                "TypeName": "AssetTransfer",
+                "ActionOverrides": {},
+                "PropertyOverrides": {}
+            }
+        }
+}

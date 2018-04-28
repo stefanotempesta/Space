@@ -1,0 +1,58 @@
+{
+"InitiatingRoles": [
+            "Admin",
+            "User"
+        ],
+        "Personas": {
+            "Owner": {
+                "Role": "Initiator",
+                "IsInitiator": true,
+                "PropertyMapping": "Owner"
+            },
+            "Buyer": {
+                "Role": "Participant",
+                "PropertyMapping": "Buyer"
+            },
+            "Appraiser": {
+                "Role": "Participant",
+                "PropertyMapping": "Appraiser"
+            },
+            "Inspector": {
+                "Role": "Participant",
+                "PropertyMapping": "Inspector"
+            }
+        },
+        "StateProperty": "State",
+        "StateMapping": {
+            "Created": 0,
+            "Active": 1,
+            "OfferPlaced": 2,
+            "PendingInspection": 3,
+            "Inspected": 4,
+            "Appraised": 5,
+            "NotionalAcceptance": 6,
+            "BuyerAccepted": 7,
+            "SellerAccepted": 8,
+            "Accepted": 9,
+            "Complete": 10,
+            "Terminated": 11
+        },
+"Constructor": {
+            "DisplayName": "Create Asset Transfer",
+            "Description": "Description of asset transfer"
+        },
+"OfferPlaced": {
+            "PercentComplete": 30,
+            "Style": "Success",
+            "Actions": {
+                "Owner": {
+                    "AcceptOffer": {},
+                    "Reject": {},
+                    "Terminate": {}
+                },
+                "Buyer": {
+                    "RescindOffer": {}
+                }
+            }
+        }
+}
