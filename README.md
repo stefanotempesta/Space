@@ -2,11 +2,11 @@
 This repository contains sample projects associated with articles I write.
 All source code is released as open source under the Microsoft Public License (Ms-PL).
 
-### MsdnAzureRedisMachineLearning
-[Machine Learning - Scale Applications with Microsoft Azure Redis and Machine Learning](https://msdn.microsoft.com/en-us/magazine/mt784664)
-
 ### AzureIoT
 [Sales Effectiveness in Dynamics CRM with Azure IoT and Machine Learning](http://www.tempesta.space/Link/sales-effectiveness-in-dynamics-crm-with-azure-iot-and-machine-learning-part-1)
+
+### BiometricSecurity
+Article for MSDN June 2019 - Coming soon!
 
 ### CodedUIMvc
 [Coded UI test automation of MVC applications with Visual Studio](http://www.tempesta.space/Link/coded-ui-test-automation-of-mvc-applications-with-visual-studio)
@@ -19,6 +19,9 @@ All source code is released as open source under the Microsoft Public License (M
 
 ### GuidSearch
 [Disserting about colliding GUIDs and the Big Bang Theory](http://www.tempesta.space/Link/disserting-about-colliding-guids-and-the-big-bang-theory)
+
+### MsdnAzureRedisMachineLearning
+[Machine Learning - Scale Applications with Microsoft Azure Redis and Machine Learning](https://msdn.microsoft.com/en-us/magazine/mt784664)
 
 ### NaturalStringOrdering
 [Natural String Sorting](http://www.tempesta.space/Link/natural-string-sorting)
