@@ -31,7 +31,7 @@ namespace BiometricSecurity.Api.Security
                         recognizer = new BodyRecognition();
                         score = r.ConfidenceScore;
                         break;
-                    case FaceRecognitionRequirement r:
+                    case VoiceRecognitionRequirement r:
                         recognizer = new VoiceRecognition();
                         score = r.ConfidenceScore;
                         break;
